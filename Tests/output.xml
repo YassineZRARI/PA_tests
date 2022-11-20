@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221120 06:01:27.311" rpa="false" schemaversion="3">
+<suite id="s1" name="SuiteDeTest Smoke" source="C:\Users\yassine.zrari\PycharmProjects\PA_tests\tests\Test_Smoke\SuiteDeTest_Smoke.robot">
+<test id="s1-t1" name="TC1_Smoke_authentification_avec_succès" line="12">
+<kw name="setup" library="Setup" type="SETUP">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Navigateur}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221120 06:01:27.844" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 06:01:27.844" endtime="20221120 06:01:38.535"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221120 06:01:38.535" endtime="20221120 06:01:38.663"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221120 06:01:38.663" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 06:01:38.663" endtime="20221120 06:01:56.249"/>
+</kw>
+<status status="PASS" starttime="20221120 06:01:27.844" endtime="20221120 06:01:56.250"/>
+</kw>
+<kw name="se_connecter" library="Se_Connecter">
+<arg>${email_citoyen}</arg>
+<arg>${mdp}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:01:56.250" endtime="20221120 06:01:56.310"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:01:56.311" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 06:01:56.310" endtime="20221120 06:02:13.205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:02:13.206" endtime="20221120 06:02:13.277"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${email_citoyen}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:02:13.277" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 06:02:13.277" endtime="20221120 06:02:13.421"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:02:13.421" endtime="20221120 06:02:13.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_mdp_login_citoyen}</arg>
+<arg>${mdp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:02:13.453" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 06:02:13.453" endtime="20221120 06:02:13.686"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:02:13.686" endtime="20221120 06:02:13.727"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:02:13.731" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 06:02:13.730" endtime="20221120 06:02:19.953"/>
+</kw>
+<status status="PASS" starttime="20221120 06:01:56.250" endtime="20221120 06:02:19.954"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_choix_profil}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:02:19.954" endtime="20221120 06:02:34.291"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Choisir un profil</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221120 06:02:34.310" level="INFO">Current page contains text 'Choisir un profil'.</msg>
+<status status="PASS" starttime="20221120 06:02:34.292" endtime="20221120 06:02:34.310"/>
+</kw>
+<status status="PASS" starttime="20221120 06:01:27.837" endtime="20221120 06:02:34.310"/>
+</test>
+<test id="s1-t2" name="TC2_Smoke_authentification_avec_faux_email" line="17">
+<kw name="setup" library="Setup" type="SETUP">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Navigateur}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221120 06:02:34.310" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:03:04.233"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221120 06:03:04.233" endtime="20221120 06:03:04.380"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221120 06:03:04.380" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 06:03:04.380" endtime="20221120 06:04:30.378"/>
+</kw>
+<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:04:30.379"/>
+</kw>
+<kw name="se_connecter" library="Se_Connecter">
+<arg>Test@test.com</arg>
+<arg>${mdp}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:04:30.381" endtime="20221120 06:04:30.438"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:04:30.438" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 06:04:30.438" endtime="20221120 06:05:23.532"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:05:23.532" endtime="20221120 06:05:23.616"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${email_citoyen}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:05:23.616" level="INFO">Typing text 'Test@test.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 06:05:23.616" endtime="20221120 06:05:23.865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:05:23.865" endtime="20221120 06:05:23.905"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_mdp_login_citoyen}</arg>
+<arg>${mdp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:05:23.905" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 06:05:23.905" endtime="20221120 06:05:24.131"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:05:24.131" endtime="20221120 06:05:24.189"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:05:24.190" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 06:05:24.189" endtime="20221120 06:05:25.367"/>
+</kw>
+<status status="PASS" starttime="20221120 06:04:30.379" endtime="20221120 06:05:25.367"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221120 06:05:25.403" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
+<status status="PASS" starttime="20221120 06:05:25.369" endtime="20221120 06:05:25.405"/>
+</kw>
+<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:05:25.409"/>
+</test>
+<test id="s1-t3" name="TC3_Smoke_authentification_avec_faux_mdp" line="21">
+<kw name="setup" library="Setup" type="SETUP">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Navigateur}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221120 06:05:25.416" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 06:05:25.416" endtime="20221120 06:05:48.013"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221120 06:05:48.013" endtime="20221120 06:05:48.280"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221120 06:05:48.280" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 06:05:48.280" endtime="20221120 06:06:05.515"/>
+</kw>
+<status status="PASS" starttime="20221120 06:05:25.414" endtime="20221120 06:06:05.519"/>
+</kw>
+<kw name="se_connecter" library="Se_Connecter">
+<arg>${email_citoyen}</arg>
+<arg>test123</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:06:05.521" endtime="20221120 06:06:05.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:06:05.614" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 06:06:05.613" endtime="20221120 06:06:13.231"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:06:13.238" endtime="20221120 06:06:13.321"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${email_citoyen}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:06:13.329" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 06:06:13.329" endtime="20221120 06:06:13.597"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:06:13.597" endtime="20221120 06:06:13.646"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_mdp_login_citoyen}</arg>
+<arg>${mdp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221120 06:06:13.646" level="INFO">Typing text 'test123' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 06:06:13.646" endtime="20221120 06:06:13.881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221120 06:06:13.881" endtime="20221120 06:06:13.934"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 06:06:13.938" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 06:06:13.934" endtime="20221120 06:06:14.594"/>
+</kw>
+<status status="PASS" starttime="20221120 06:06:05.519" endtime="20221120 06:06:14.594"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221120 06:06:14.624" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
+<status status="PASS" starttime="20221120 06:06:14.595" endtime="20221120 06:06:14.625"/>
+</kw>
+<status status="PASS" starttime="20221120 06:05:25.413" endtime="20221120 06:06:14.625"/>
+</test>
+<status status="PASS" starttime="20221120 06:01:27.328" endtime="20221120 06:06:14.628"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="SuiteDeTest Smoke">SuiteDeTest Smoke</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221120 06:01:27.827" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 3: Resource file '\Elements\Page_Se_Connecter.robot' does not exist.</msg>
+<msg timestamp="20221120 06:01:27.828" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 4: Resource file '\Configuration\Config.robot' does not exist.</msg>
+<msg timestamp="20221120 06:01:27.837" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Configuration\Setup.robot' on line 3: Resource file '\Configuration\Config.robot' does not exist.</msg>
+</errors>
+</robot>
