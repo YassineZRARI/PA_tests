@@ -21,3 +21,8 @@ TC2_Smoke_authentification_avec_faux_email
 TC3_Smoke_authentification_avec_faux_mdp
     se_connecter    ${email_citoyen}        test123
     page should contain     Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?
+
+TC4_Smoke_création_demande_gratuite
+    [Tags]    test
+    se_connecter    ${email_citoyen}    ${mdp}
+    initier_création_demande

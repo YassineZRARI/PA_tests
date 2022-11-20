@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221120 06:01:27.311" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221120 08:01:53.097" rpa="false" schemaversion="3">
 <suite id="s1" name="SuiteDeTest Smoke" source="C:\Users\yassine.zrari\PycharmProjects\PA_tests\tests\Test_Smoke\SuiteDeTest_Smoke.robot">
 <test id="s1-t1" name="TC1_Smoke_authentification_avec_succès" line="12">
 <kw name="setup" library="Setup" type="SETUP">
@@ -8,20 +8,20 @@
 <arg>${URL}</arg>
 <arg>${Navigateur}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221120 06:01:27.844" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
-<status status="PASS" starttime="20221120 06:01:27.844" endtime="20221120 06:01:38.535"/>
+<msg timestamp="20221120 08:01:53.640" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 08:01:53.640" endtime="20221120 08:02:02.727"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 06:01:38.535" endtime="20221120 06:01:38.663"/>
+<status status="PASS" starttime="20221120 08:02:02.728" endtime="20221120 08:02:02.841"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL1}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221120 06:01:38.663" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
-<status status="PASS" starttime="20221120 06:01:38.663" endtime="20221120 06:01:56.249"/>
+<msg timestamp="20221120 08:02:02.841" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 08:02:02.841" endtime="20221120 08:02:21.091"/>
 </kw>
-<status status="PASS" starttime="20221120 06:01:27.844" endtime="20221120 06:01:56.250"/>
+<status status="PASS" starttime="20221120 08:01:53.640" endtime="20221120 08:02:21.091"/>
 </kw>
 <kw name="se_connecter" library="Se_Connecter">
 <arg>${email_citoyen}</arg>
@@ -30,67 +30,67 @@
 <arg>${mon_compte}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:01:56.250" endtime="20221120 06:01:56.310"/>
+<status status="PASS" starttime="20221120 08:02:21.093" endtime="20221120 08:02:21.131"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${mon_compte}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:01:56.311" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
-<status status="PASS" starttime="20221120 06:01:56.310" endtime="20221120 06:02:13.205"/>
+<msg timestamp="20221120 08:02:21.131" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 08:02:21.131" endtime="20221120 08:02:27.801"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:02:13.206" endtime="20221120 06:02:13.277"/>
+<status status="PASS" starttime="20221120 08:02:27.801" endtime="20221120 08:02:27.833"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${email_citoyen}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:02:13.277" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
-<status status="PASS" starttime="20221120 06:02:13.277" endtime="20221120 06:02:13.421"/>
+<msg timestamp="20221120 08:02:27.841" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 08:02:27.833" endtime="20221120 08:02:27.939"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:02:13.421" endtime="20221120 06:02:13.453"/>
+<status status="PASS" starttime="20221120 08:02:27.939" endtime="20221120 08:02:27.966"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_mdp_login_citoyen}</arg>
 <arg>${mdp}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:02:13.453" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
-<status status="PASS" starttime="20221120 06:02:13.453" endtime="20221120 06:02:13.686"/>
+<msg timestamp="20221120 08:02:27.966" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 08:02:27.966" endtime="20221120 08:02:28.090"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:02:13.686" endtime="20221120 06:02:13.727"/>
+<status status="PASS" starttime="20221120 08:02:28.090" endtime="20221120 08:02:28.123"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:02:13.731" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
-<status status="PASS" starttime="20221120 06:02:13.730" endtime="20221120 06:02:19.953"/>
+<msg timestamp="20221120 08:02:28.123" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 08:02:28.123" endtime="20221120 08:02:32.538"/>
 </kw>
-<status status="PASS" starttime="20221120 06:01:56.250" endtime="20221120 06:02:19.954"/>
+<status status="PASS" starttime="20221120 08:02:21.092" endtime="20221120 08:02:32.538"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${btn_choix_profil}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:02:19.954" endtime="20221120 06:02:34.291"/>
+<status status="PASS" starttime="20221120 08:02:32.538" endtime="20221120 08:02:39.175"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Choisir un profil</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221120 06:02:34.310" level="INFO">Current page contains text 'Choisir un profil'.</msg>
-<status status="PASS" starttime="20221120 06:02:34.292" endtime="20221120 06:02:34.310"/>
+<msg timestamp="20221120 08:02:39.190" level="INFO">Current page contains text 'Choisir un profil'.</msg>
+<status status="PASS" starttime="20221120 08:02:39.177" endtime="20221120 08:02:39.190"/>
 </kw>
-<status status="PASS" starttime="20221120 06:01:27.837" endtime="20221120 06:02:34.310"/>
+<status status="PASS" starttime="20221120 08:01:53.640" endtime="20221120 08:02:39.190"/>
 </test>
 <test id="s1-t2" name="TC2_Smoke_authentification_avec_faux_email" line="17">
 <kw name="setup" library="Setup" type="SETUP">
@@ -99,20 +99,20 @@
 <arg>${URL}</arg>
 <arg>${Navigateur}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221120 06:02:34.310" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
-<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:03:04.233"/>
+<msg timestamp="20221120 08:02:39.201" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 08:02:39.201" endtime="20221120 08:02:46.951"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 06:03:04.233" endtime="20221120 06:03:04.380"/>
+<status status="PASS" starttime="20221120 08:02:46.951" endtime="20221120 08:02:47.065"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL1}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221120 06:03:04.380" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
-<status status="PASS" starttime="20221120 06:03:04.380" endtime="20221120 06:04:30.378"/>
+<msg timestamp="20221120 08:02:47.065" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 08:02:47.065" endtime="20221120 08:02:55.714"/>
 </kw>
-<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:04:30.379"/>
+<status status="PASS" starttime="20221120 08:02:39.199" endtime="20221120 08:02:55.714"/>
 </kw>
 <kw name="se_connecter" library="Se_Connecter">
 <arg>Test@test.com</arg>
@@ -121,61 +121,61 @@
 <arg>${mon_compte}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:04:30.381" endtime="20221120 06:04:30.438"/>
+<status status="PASS" starttime="20221120 08:02:55.714" endtime="20221120 08:02:55.754"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${mon_compte}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:04:30.438" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
-<status status="PASS" starttime="20221120 06:04:30.438" endtime="20221120 06:05:23.532"/>
+<msg timestamp="20221120 08:02:55.754" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 08:02:55.754" endtime="20221120 08:02:58.124"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:05:23.532" endtime="20221120 06:05:23.616"/>
+<status status="PASS" starttime="20221120 08:02:58.124" endtime="20221120 08:02:58.156"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${email_citoyen}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:05:23.616" level="INFO">Typing text 'Test@test.com' into text field '//input[@id='loginForm:username']'.</msg>
-<status status="PASS" starttime="20221120 06:05:23.616" endtime="20221120 06:05:23.865"/>
+<msg timestamp="20221120 08:02:58.156" level="INFO">Typing text 'Test@test.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 08:02:58.156" endtime="20221120 08:02:58.272"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:05:23.865" endtime="20221120 06:05:23.905"/>
+<status status="PASS" starttime="20221120 08:02:58.272" endtime="20221120 08:02:58.297"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_mdp_login_citoyen}</arg>
 <arg>${mdp}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:05:23.905" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
-<status status="PASS" starttime="20221120 06:05:23.905" endtime="20221120 06:05:24.131"/>
+<msg timestamp="20221120 08:02:58.297" level="INFO">Typing text 'asdf1234' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 08:02:58.297" endtime="20221120 08:02:58.407"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:05:24.131" endtime="20221120 06:05:24.189"/>
+<status status="PASS" starttime="20221120 08:02:58.407" endtime="20221120 08:02:58.436"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:05:24.190" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
-<status status="PASS" starttime="20221120 06:05:24.189" endtime="20221120 06:05:25.367"/>
+<msg timestamp="20221120 08:02:58.436" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 08:02:58.436" endtime="20221120 08:02:59.076"/>
 </kw>
-<status status="PASS" starttime="20221120 06:04:30.379" endtime="20221120 06:05:25.367"/>
+<status status="PASS" starttime="20221120 08:02:55.714" endtime="20221120 08:02:59.077"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221120 06:05:25.403" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
-<status status="PASS" starttime="20221120 06:05:25.369" endtime="20221120 06:05:25.405"/>
+<msg timestamp="20221120 08:02:59.104" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
+<status status="PASS" starttime="20221120 08:02:59.078" endtime="20221120 08:02:59.105"/>
 </kw>
-<status status="PASS" starttime="20221120 06:02:34.310" endtime="20221120 06:05:25.409"/>
+<status status="PASS" starttime="20221120 08:02:39.199" endtime="20221120 08:02:59.105"/>
 </test>
 <test id="s1-t3" name="TC3_Smoke_authentification_avec_faux_mdp" line="21">
 <kw name="setup" library="Setup" type="SETUP">
@@ -184,20 +184,20 @@
 <arg>${URL}</arg>
 <arg>${Navigateur}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221120 06:05:25.416" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
-<status status="PASS" starttime="20221120 06:05:25.416" endtime="20221120 06:05:48.013"/>
+<msg timestamp="20221120 08:02:59.107" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 08:02:59.107" endtime="20221120 08:03:29.997"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 06:05:48.013" endtime="20221120 06:05:48.280"/>
+<status status="PASS" starttime="20221120 08:03:29.997" endtime="20221120 08:03:30.134"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL1}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221120 06:05:48.280" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
-<status status="PASS" starttime="20221120 06:05:48.280" endtime="20221120 06:06:05.515"/>
+<msg timestamp="20221120 08:03:30.135" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 08:03:30.135" endtime="20221120 08:05:32.413"/>
 </kw>
-<status status="PASS" starttime="20221120 06:05:25.414" endtime="20221120 06:06:05.519"/>
+<status status="PASS" starttime="20221120 08:02:59.107" endtime="20221120 08:05:32.413"/>
 </kw>
 <kw name="se_connecter" library="Se_Connecter">
 <arg>${email_citoyen}</arg>
@@ -206,77 +206,255 @@
 <arg>${mon_compte}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:06:05.521" endtime="20221120 06:06:05.613"/>
+<status status="PASS" starttime="20221120 08:05:32.415" endtime="20221120 08:05:37.599"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${mon_compte}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:06:05.614" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
-<status status="PASS" starttime="20221120 06:06:05.613" endtime="20221120 06:06:13.231"/>
+<msg timestamp="20221120 08:05:37.599" level="INFO">Clicking element '//span[normalize-space()='Mon compte']'.</msg>
+<status status="PASS" starttime="20221120 08:05:37.599" endtime="20221120 08:05:53.992"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:06:13.238" endtime="20221120 06:06:13.321"/>
+<status status="PASS" starttime="20221120 08:05:53.992" endtime="20221120 08:05:54.034"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${email_citoyen}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:06:13.329" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
-<status status="PASS" starttime="20221120 06:06:13.329" endtime="20221120 06:06:13.597"/>
+<msg timestamp="20221120 08:05:54.042" level="INFO">Typing text 'ferayohouprou-8149@yopmail.com' into text field '//input[@id='loginForm:username']'.</msg>
+<status status="PASS" starttime="20221120 08:05:54.034" endtime="20221120 08:05:54.207"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${text_email_login_citoyen}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:06:13.597" endtime="20221120 06:06:13.646"/>
+<status status="PASS" starttime="20221120 08:05:54.208" endtime="20221120 08:05:54.232"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${text_mdp_login_citoyen}</arg>
 <arg>${mdp}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 06:06:13.646" level="INFO">Typing text 'test123' into text field '//input[@id='loginForm:password']'.</msg>
-<status status="PASS" starttime="20221120 06:06:13.646" endtime="20221120 06:06:13.881"/>
+<msg timestamp="20221120 08:05:54.232" level="INFO">Typing text 'test123' into text field '//input[@id='loginForm:password']'.</msg>
+<status status="PASS" starttime="20221120 08:05:54.232" endtime="20221120 08:05:54.386"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <arg>${ATT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 06:06:13.881" endtime="20221120 06:06:13.934"/>
+<status status="PASS" starttime="20221120 08:05:54.386" endtime="20221120 08:05:54.428"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn_me_connecter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 06:06:13.938" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
-<status status="PASS" starttime="20221120 06:06:13.934" endtime="20221120 06:06:14.594"/>
+<msg timestamp="20221120 08:05:54.428" level="INFO">Clicking element '//input[@id='loginForm:loginButton']'.</msg>
+<status status="PASS" starttime="20221120 08:05:54.428" endtime="20221120 08:05:54.992"/>
 </kw>
-<status status="PASS" starttime="20221120 06:06:05.519" endtime="20221120 06:06:14.594"/>
+<status status="PASS" starttime="20221120 08:05:32.413" endtime="20221120 08:05:54.994"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221120 06:06:14.624" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
-<status status="PASS" starttime="20221120 06:06:14.595" endtime="20221120 06:06:14.625"/>
+<msg timestamp="20221120 08:05:55.024" level="INFO">Current page contains text 'Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?'.</msg>
+<status status="PASS" starttime="20221120 08:05:54.998" endtime="20221120 08:05:55.025"/>
 </kw>
-<status status="PASS" starttime="20221120 06:05:25.413" endtime="20221120 06:06:14.625"/>
+<status status="PASS" starttime="20221120 08:02:59.107" endtime="20221120 08:05:55.025"/>
 </test>
-<status status="PASS" starttime="20221120 06:01:27.328" endtime="20221120 06:06:14.628"/>
+<test id="s1-t4" name="TC4_Smoke_création_demande_gratuite" line="25">
+<kw name="setup" library="Setup" type="SETUP">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Navigateur}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221120 08:05:55.035" level="INFO">Opening browser 'Chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221120 08:05:55.035" endtime="20221120 08:06:03.465"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221120 08:06:03.465" endtime="20221120 08:06:03.597"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221120 08:06:03.597" level="INFO">Opening url 'https://mtlacc:T5nzD67a@accept.montreal.ca/'</msg>
+<status status="PASS" starttime="20221120 08:06:03.597" endtime="20221120 08:06:10.943"/>
+</kw>
+<status status="PASS" starttime="20221120 08:05:55.033" endtime="20221120 08:06:10.943"/>
+</kw>
+<kw name="se_connecter" library="Se_Connecter">
+<arg>${email_citoyen}</arg>
+<arg>${mdp}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20221120 08:06:10.958" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A2ACD3+2075859]
+	Ordinal0 [0x009BEE61+1633889]
+	Ordinal0 [0x008BB7BD+571325]
+	Ordinal0 [0x008A2E1A+470554]
+	Ordinal0 [0x0090AA0B+895499]
+	Ordinal0 [0x0091AC96+961686]
+	Ordinal0 [0x00907136+880950]
+	Ordinal0 [0x008DFEFD+720637]
+	Ordinal0 [0x008E0F3F+724799]
+	GetHandleVerifier [0x00CDEED2+2769538]
+	GetHandleVerifier [0x00CD0D95+2711877]
+	GetHandleVerifier [0x00ABA03A+521194]
+	GetHandleVerifier [0x00AB8DA0+516432]
+	Ordinal0 [0x009C682C+1665068]
+	Ordinal0 [0x009CB128+1683752]
+	Ordinal0 [0x009CB215+1683989]
+	Ordinal0 [0x009D6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773A7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773A7B8E+238]
+</msg>
+<msg timestamp="20221120 08:06:10.972" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A2ACD3+2075859]
+	Ordinal0 [0x009BEE61+1633889]
+	Ordinal0 [0x008BB7BD+571325]
+	Ordinal0 [0x008A2E1A+470554]
+	Ordinal0 [0x0090AA0B+895499]
+	Ordinal0 [0x0091AC96+961686]
+	Ordinal0 [0x00907136+880950]
+	Ordinal0 [0x008DFEFD+720637]
+	Ordinal0 [0x008E0F3F+724799]
+	GetHandleVerifier [0x00CDEED2+2769538]
+	GetHandleVerifier [0x00CD0D95+2711877]
+	GetHandleVerifier [0x00ABA03A+521194]
+	GetHandleVerifier [0x00AB8DA0+516432]
+	Ordinal0 [0x009C682C+1665068]
+	Ordinal0 [0x009CB128+1683752]
+	Ordinal0 [0x009CB215+1683989]
+	Ordinal0 [0x009D6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773A7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773A7B8E+238]
+</msg>
+<status status="FAIL" starttime="20221120 08:06:10.945" endtime="20221120 08:06:11.063"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mon_compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.064" endtime="20221120 08:06:11.064"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.065" endtime="20221120 08:06:11.065"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${email_citoyen}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.065" endtime="20221120 08:06:11.065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_email_login_citoyen}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.065" endtime="20221120 08:06:11.065"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_mdp_login_citoyen}</arg>
+<arg>${mdp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.065" endtime="20221120 08:06:11.065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<arg>${ATT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.065" endtime="20221120 08:06:11.065"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_me_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221120 08:06:11.066" endtime="20221120 08:06:11.066"/>
+</kw>
+<status status="FAIL" starttime="20221120 08:06:10.944" endtime="20221120 08:06:11.066"/>
+</kw>
+<status status="FAIL" starttime="20221120 08:05:55.030" endtime="20221120 08:06:11.271">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A2ACD3+2075859]
+	Ordinal0 [0x009BEE61+1633889]
+	Ordinal0 [0x008BB7BD+571325]
+	Ordinal0 [0x008A2E1A+470554]
+	Ordinal0 [0x0090AA0B+895499]
+	Ordinal0 [0x0091AC96+961686]
+	Ordinal0 [0x00907136+880950]
+	Ordinal0 [0x008DFEFD+720637]
+	Ordinal0 [0x008E0F3F+724799]
+	GetHandleVerifier [0x00CDEED2+2769538]
+	GetHandleVerifier [0x00CD0D95+2711877]
+	GetHandleVerifier [0x00ABA03A+521194]
+	GetHandleVerifier [0x00AB8DA0+516432]
+	Ordinal0 [0x009C682C+1665068]
+	Ordinal0 [0x009CB128+1683752]
+	Ordinal0 [0x009CB215+1683989]
+	Ordinal0 [0x009D6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773A7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773A7B8E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20221120 08:01:53.107" endtime="20221120 08:06:11.317"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="SuiteDeTest Smoke">SuiteDeTest Smoke</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="SuiteDeTest Smoke">SuiteDeTest Smoke</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221120 06:01:27.827" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 3: Resource file '\Elements\Page_Se_Connecter.robot' does not exist.</msg>
-<msg timestamp="20221120 06:01:27.828" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 4: Resource file '\Configuration\Config.robot' does not exist.</msg>
-<msg timestamp="20221120 06:01:27.837" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Configuration\Setup.robot' on line 3: Resource file '\Configuration\Config.robot' does not exist.</msg>
+<msg timestamp="20221120 08:01:53.629" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 3: Resource file '\Elements\Page_Se_Connecter.robot' does not exist.</msg>
+<msg timestamp="20221120 08:01:53.629" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Keywords\Se_Connecter.robot' on line 4: Resource file '\Configuration\Config.robot' does not exist.</msg>
+<msg timestamp="20221120 08:01:53.637" level="ERROR">Error in file 'C:\Users\yassine.zrari\PycharmProjects\PA_tests\Configuration\Setup.robot' on line 3: Resource file '\Configuration\Config.robot' does not exist.</msg>
+<msg timestamp="20221120 08:06:10.958" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A2ACD3+2075859]
+	Ordinal0 [0x009BEE61+1633889]
+	Ordinal0 [0x008BB7BD+571325]
+	Ordinal0 [0x008A2E1A+470554]
+	Ordinal0 [0x0090AA0B+895499]
+	Ordinal0 [0x0091AC96+961686]
+	Ordinal0 [0x00907136+880950]
+	Ordinal0 [0x008DFEFD+720637]
+	Ordinal0 [0x008E0F3F+724799]
+	GetHandleVerifier [0x00CDEED2+2769538]
+	GetHandleVerifier [0x00CD0D95+2711877]
+	GetHandleVerifier [0x00ABA03A+521194]
+	GetHandleVerifier [0x00AB8DA0+516432]
+	Ordinal0 [0x009C682C+1665068]
+	Ordinal0 [0x009CB128+1683752]
+	Ordinal0 [0x009CB215+1683989]
+	Ordinal0 [0x009D6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773A7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773A7B8E+238]
+</msg>
 </errors>
 </robot>
