@@ -1,12 +1,11 @@
 
 *** Variables ***
-${btn_continuer_etape2}=    //*[@id="main-content"]/div/app-task-list/div/div[2]/article/div/app-task-list-item[2]/div/button
-#Page info animal -Etape2-1
-${choix_chien}=     //label[@for='dog']//div[@class='d-flex align-items-center']
-${Nom_chien}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-personal-info-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-form-page[1]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/vdm-input[1]/div[1]/input[1]
-${sex_chien}=   //label[contains(text(),'Mâle')]
-${race_chien}=  //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-personal-info-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-form-page[1]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/div[1]/app-animal-race-selector[1]/div[1]/div[2]/vdm-select[1]/div[1]/select[1]
-${couleur_chien}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-personal-info-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-form-page[1]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/vdm-select[1]/div[1]/select[1]
-${annnee_naissance_chien}=    //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-personal-info-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-form-page[1]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/vdm-select[2]/div[1]/select[1]
-${poids_chien}=  //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-personal-info-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-form-page[1]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/div[2]/div[1]/input[1]
-${suivant_etape2_1}=      //button[contains(text(),'Suivant')]
+${btn_continuer_etape3}=    //button[contains(text(),'Continuer')]
+#Page etape3_1
+${gratuite_non}=    //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-situation[1]/div[1]/div[1]/article[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/vdm-radio[1]/div[1]/div[2]/label[1]
+${gratuite_oui}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-situation[1]/div[1]/div[1]/article[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/vdm-radio[1]/div[1]/div[1]/label[1]
+${pj_gratuite_oui}=     //input[@id='assistance_0']
+${refuge_non}=      //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-situation[1]/div[1]/div[1]/article[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/vdm-radio[1]/div[1]/div[2]/label[1]
+${itinerance}=      //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-situation[1]/div[1]/div[1]/article[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[3]/div[1]/form[1]/vdm-radio[1]/div[1]/div[2]/label[1]
+${avec_refuge_non}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-animal-situation[1]/div[1]/div[1]/article[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[4]/div[1]/form[1]/vdm-radio[1]/div[1]/div[2]/label[1]
+${suivant_etape3_1}=    //button[contains(text(),'Suivant')]
