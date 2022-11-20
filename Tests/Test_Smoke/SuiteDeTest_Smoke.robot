@@ -26,3 +26,7 @@ TC4_Smoke_création_demande_gratuite
     [Tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
+    renseigner etape2_1
+    renseigner etape2_2
+    renseigner etape2_3
+
