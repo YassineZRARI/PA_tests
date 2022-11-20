@@ -4,7 +4,7 @@ Resource    /Elements/Page_Se_Connecter.robot
 Resource    /Configuration/Config.robot
 
 *** Keywords ***
-renseigner etape2_1
+renseigner etape3_1
 #choix etape3
     wait until element is visible   ${btn_continuer_etape3}     ${ATT}
     scroll element into view    ${btn_continuer_etape3}

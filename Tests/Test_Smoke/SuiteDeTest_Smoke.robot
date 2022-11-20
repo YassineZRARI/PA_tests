@@ -29,4 +29,9 @@ TC4_Smoke_création_demande_gratuite
     renseigner etape2_1
     renseigner etape2_2
     renseigner etape2_3
+    renseigner etape3_1
+    vérifier_information_etape3_2
+    soumettre_demande
+    vérifier_soumission_demande
+
 

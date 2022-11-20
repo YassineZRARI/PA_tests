@@ -2,6 +2,10 @@
 Library    SeleniumLibrary
 Resource    /Elements/Page_Se_Connecter.robot
 Resource    /Configuration/Config.robot
+Library    SeleniumLibrary
+Resource    /Elements/Page_Se_Connecter.robot
+Resource    /Configuration/Config.robot
+
 
 *** Keywords ***
 renseigner etape2_2
