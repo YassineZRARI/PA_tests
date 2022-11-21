@@ -4,8 +4,11 @@ Resource    /Elements/Page_Se_Connecter.robot
 Resource    /Configuration/Config.robot
 
 *** Keywords ***
-vérifier_information_etape3_2
-#Vérifier que les infos idem que avant "description animal"
+vérifier_information_description_animal_sommaire
+
+vérifier_information_caracteristique_sommaire
+
+vérifier_information_gratuité_sommaire
 
 #Verifier que le choix est idem dans le sommaine
     wait until element is visible    ${modifier_caracteristiques}      ${ATT}

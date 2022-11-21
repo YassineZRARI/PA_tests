@@ -30,7 +30,9 @@ TC4_Smoke_création_demande_gratuite
     renseigner_etape2_2
     renseigner_etape2_3
     renseigner_etape3_1     oui
-    vérifier_information_etape3_2
+    vérifier_information_description_animal_sommaire
+    vérifier_information_caracteristique_sommaire
+    vérifier_information_gratuité_sommaire
     soumettre_demande
     vérifier_soumission_demande
 
@@ -42,7 +44,9 @@ TC5_Smoke_création_demande_avec_paiement
     renseigner_etape2_2
     renseigner_etape2_3
     renseigner_etape3_1     non
-    vérifier_information_etape3_2
+    vérifier_information_description_animal_sommaire
+    vérifier_information_caracteristique_sommaire
+    vérifier_information_gratuité_sommaire
     payer_en_ligne
     vérifier_le_paiement
 
