@@ -29,3 +29,9 @@ ${micropuce_num_sommaire}=  //app-label-value[@ng-reflect-label='Numéro de la m
 
 ${sterilise_sommaire}=      //app-label-value[@ng-reflect-label='Stérilisé']//div//div
 ${sterilise_preuve}=        //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/div[1]/div[1]/div[1]/div[3]/app-animal-characteristics-display[1]/div[1]/div[1]/div[1]/div[2]/app-document-display[1]/div[1]/button[1]
+
+#check_gratuité_sommaire
+${titre_gratuité_animal_sommaire}=      //app-animal-situation-display[@ng-reflect-application='[object Object]']//h5[contains(text(),'Conditions de gratuité')]
+${gratuité_animal_non_sommaire}=        //app-animal-situation-display[@ng-reflect-application='[object Object]']//div//div//div//span
+${gratuité_animal_oui_sommaire}=        //app-label-value[@ng-reflect-label="Animal provenant d'un refuge"]//div//div
+${gratuité_animal_oui_preuve_sommaire}=        //app-animal-situation-display[@ng-reflect-application='[object Object]']//div//button
