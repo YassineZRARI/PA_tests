@@ -19,7 +19,6 @@ vérifier_information_gratuité_sommaire
     element should be visible    ${micropuce_num_sommaire_label}
     element text should be       ${micropuce_num_sommaire}            111111
 
-
 soumettre_demande
     wait until element is visible    ${btn_soumettre}   ${ATT}
     scroll element into view    ${btn_soumettre}
