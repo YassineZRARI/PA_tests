@@ -26,12 +26,29 @@ TC4_Smoke_création_demande_gratuite
     [Tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
-    renseigner etape2_1
-    renseigner etape2_2
-    renseigner etape2_3
-    renseigner etape3_1
+    renseigner_etape2_1
+    renseigner_etape2_2
+    renseigner_etape2_3
+    renseigner_etape3_1     oui
     vérifier_information_etape3_2
     soumettre_demande
     vérifier_soumission_demande
+
+TC5_Smoke_création_demande_avec_paiement
+    [Tags]    test
+    se_connecter    ${email_citoyen}    ${mdp}
+    initier_création_demande
+    renseigner_etape2_1
+    renseigner_etape2_2
+    renseigner_etape2_3
+    renseigner_etape3_1     non
+    vérifier_information_etape3_2
+    payer_en_ligne
+    vérifier_le_paiement
+
+
+
+
+
 
 

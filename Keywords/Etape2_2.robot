@@ -8,7 +8,7 @@ Resource    /Configuration/Config.robot
 
 
 *** Keywords ***
-renseigner etape2_2
+renseigner_etape2_2
 #Remplir page tache 2-2
    wait until element is visible    ${1}   ${ATT}
     click element    ${1}

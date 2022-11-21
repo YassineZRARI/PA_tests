@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 
-*** keywords ***
+*** Keywords ***
 teardown
     Sleep    5
     Close All Browsers

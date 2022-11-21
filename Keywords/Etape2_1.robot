@@ -4,7 +4,7 @@ Resource    /Elements/Page_Se_Connecter.robot
 Resource    /Configuration/Config.robot
 
 *** Keywords ***
-renseigner etape2_1
+renseigner_etape2_1
 #choix etape2
     WAIT UNTIL ELEMENT IS VISIBLE    ${btn_continuer_etape2}    ${ATT}
     click element    ${btn_continuer_etape2}

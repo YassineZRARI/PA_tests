@@ -5,7 +5,17 @@ Resource    /Configuration/Config.robot
 
 *** Keywords ***
 vérifier_information_etape3_2
-    #Vérifier que les info idem que avant (à faire)
+#Vérifier que les infos idem que avant "description animal"
+
+#Verifier que le choix est idem dans le sommaine
+    wait until element is visible    ${modifier_caracteristiques}      ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    wait until element is visible    ${micropuce_sommaire}      ${ATT}
+    element text should be    ${micropuce_sommaire}       Oui
+    element should be visible    ${micropuce_preuve_sommaire}
+    element should be visible    ${micropuce_num_sommaire_label}
+    element text should be       ${micropuce_num_sommaire}            111111
+
 
 soumettre_demande
     wait until element is visible    ${btn_soumettre}   ${ATT}

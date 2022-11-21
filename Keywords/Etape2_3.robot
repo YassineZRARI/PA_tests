@@ -4,7 +4,7 @@ Resource    /Elements/Page_Se_Connecter.robot
 Resource    /Configuration/Config.robot
 
 *** Keywords ***
-renseigner etape2_3
+renseigner_etape2_3
 #Remplir page tache 2-3
     wait until element is visible    ${sterilise_oui}   ${ATT}
     click element    ${sterilise_oui}
