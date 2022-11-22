@@ -21,6 +21,7 @@ ${poids_animal_naissance}=      //app-label-value[@ng-reflect-label='Poids']//di
 #check_caracteristique_sommaire
 ${modifier_caracteristiques}=       //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[1]/div[1]/div[3]/button[1]
 ${fermer_modifier_caracteristiques}=        //div[@class='modal fade show']//span[@aria-hidden='true'][normalize-space()='×']
+${titre_caracteristique_animal_sommaire}=       //app-animal-characteristics-display[@ng-reflect-application='[object Object]']//h5
 
 ${micropuce_sommaire}=      //app-label-value[@ng-reflect-label='Micropucé']//div//div[contains(text(),'Oui')]
 ${micropuce_preuve_sommaire}=    //*[@id="main-content"]/div/div/app-summary-wizard-step/div/app-summary/div/div[1]/div/div[3]/app-animal-characteristics-display/div/div[1]/div[2]/div[2]/app-document-display/div/button

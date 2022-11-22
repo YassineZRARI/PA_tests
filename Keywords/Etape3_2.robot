@@ -23,6 +23,8 @@ vérifier_information_description_animal_sommaire
 
 vérifier_information_caracteristique_sommaire
     scroll element into view    ${micropuce_num_sommaire}
+    wait until element is visible       ${titre_caracteristique_animal_sommaire}        ${ATT}
+    element text should be      ${titre_caracteristique_animal_sommaire}        Caractéristiques
     wait until element is visible    ${sterilise_sommaire}      ${ATT}
     element text should be      ${sterilise_sommaire}     Oui
     element should be visible    ${sterilise_preuve}

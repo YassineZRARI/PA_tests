@@ -37,7 +37,6 @@ TC3_Smoke_authentification_avec_faux_mdp
     page should contain     Oups! Il semble y avoir une erreur dans le courriel ou le mot de passe. Avez-vous oublié votre mot de passe?
 
 TC4_Smoke_création_demande_gratuite
-    [Tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
     renseigner_etape2_1
@@ -52,13 +51,14 @@ TC4_Smoke_création_demande_gratuite
     vérifier_soumission_demande
 
 TC5_Smoke_création_demande_avec_paiement
-    [Tags]    s
+    [Tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
     renseigner_etape2_1
     renseigner_etape2_2
     renseigner_etape2_3
     renseigner_etape3_1     non
+    #etape3_2
     vérifier_information_description_animal_sommaire
     vérifier_information_caracteristique_sommaire
     vérifier_information_gratuité_sommaire
