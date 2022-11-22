@@ -45,12 +45,22 @@ vérifier_information_caracteristique_sommaire
     element text should be    ${permis_antécédents_sommaire}        Inconnu
 
 vérifier_information_gratuité_sommaire
+    [arguments]    ${gratuit_oui_non}
+    run keyword if      '${gratuit_oui_non}' == 'oui'       verifie_gratuite_oui      ELSE     verifie_gratuite_non
+verifie_gratuite_oui
     scroll element into view    ${gratuité_animal_oui_sommaire}
     wait until element is visible    ${titre_gratuité_animal_sommaire}      ${ATT}
     element text should be    ${titre_gratuité_animal_sommaire}     Conditions de gratuité
     wait until element is visible    ${gratuité_animal_oui_sommaire}       ${ATT}
     element text should be    ${gratuité_animal_oui_sommaire}       Oui
     element should be visible   ${gratuité_animal_oui_preuve_sommaire}
+verifie_gratuite_non
+    scroll element into view    ${gratuité_animal_non_sommaire}
+    wait until element is visible    ${titre_gratuité_animal_sommaire}      ${ATT}
+    element text should be    ${titre_gratuité_animal_sommaire}     Conditions de gratuité
+    wait until element is visible    ${gratuité_animal_non_sommaire}       ${ATT}
+    element text should be    ${gratuité_animal_non_sommaire}       Aucune
+    element should not be visible    ${gratuité_animal_oui_preuve_sommaire}
 
 soumettre_demande
     wait until element is visible    ${btn_soumettre}   ${ATT}

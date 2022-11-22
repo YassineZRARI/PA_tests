@@ -61,7 +61,8 @@ TC5_Smoke_création_demande_avec_paiement
     #etape3_2
     vérifier_information_description_animal_sommaire
     vérifier_information_caracteristique_sommaire
-    vérifier_information_gratuité_sommaire
+    vérifier_information_gratuité_sommaire      non
+    soumettre_demande
     payer_en_ligne
     vérifier_le_paiement
 
