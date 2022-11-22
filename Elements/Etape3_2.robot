@@ -10,8 +10,8 @@ ${modifier_poids}=      //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-
 ${sauvegarder_modification_animal}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-description-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[3]/div[1]/button[2]
 
 #check_descrition_animal_sommaire
-${titre_description_animal_sommaire}=       //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/div[1]/div[1]/div[1]/div[2]/app-animal-description-display[1]/div[1]/h5[1]
-${nom_animal_sommaire}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/div[1]/div[1]/div[1]/div[2]/app-animal-description-display[1]/div[1]/div[1]/div[1]/div[1]/app-label-value[1]/div[1]/div[1]
+${titre_description_animal_sommaire}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[1]/div[1]/div[2]/app-animal-description-display[1]/div[1]/h5[1]
+${nom_animal_sommaire}=     //app-label-value[@ng-reflect-label='Nom']//div//div
 ${sexe_animal_sommaire}=    //app-label-value[@ng-reflect-label='Sexe']//div//div
 ${race_animal_sommaire}=        //app-label-value[@ng-reflect-label='Race']//div//div
 ${couleur_animal_sommaire}=        //app-label-value[@ng-reflect-label='Couleur']//div//div
@@ -28,10 +28,22 @@ ${micropuce_num_sommaire_label}=        //app-label-value[@class='ng-star-insert
 ${micropuce_num_sommaire}=  //app-label-value[@ng-reflect-label='Numéro de la micropuce']//div//div
 
 ${sterilise_sommaire}=      //app-label-value[@ng-reflect-label='Stérilisé']//div//div
-${sterilise_preuve}=        //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/div[1]/div[1]/div[1]/div[3]/app-animal-characteristics-display[1]/div[1]/div[1]/div[1]/div[2]/app-document-display[1]/div[1]/button[1]
+${sterilise_preuve}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[1]/div[1]/div[3]/app-animal-characteristics-display[1]/div[1]/div[1]/div[1]/div[2]/app-document-display[1]/div[1]/button[1]
+
+${distinctifs_sommaire}=        //app-label-value[@ng-reflect-label='Signes distinctifs']//div//div
+${provenance_animal_sommaire}=          //body/div[@id='main-content']/div/div[@id='shell-main-content']/div/app-root/div/app-animal-situation-wizard/vdm-wizard[@ng-reflect-steps='[object Object],[object Object']/main[@id='main-content']/div/div/app-summary-wizard-step/div/app-summary[@ng-reflect-application='[object Object]']/div/div/div/div/app-animal-characteristics-display[@ng-reflect-application='[object Object]']/div/div/div[1]/div[1]/div[1]
+${permis_antécédents_sommaire}=      //body/div[@id='main-content']/div/div[@id='shell-main-content']/div/app-root/div/app-animal-situation-wizard/vdm-wizard[@ng-reflect-steps='[object Object],[object Object']/main[@id='main-content']/div/div/app-summary-wizard-step/div/app-summary[@ng-reflect-application='[object Object]']/div/div/div/div/app-animal-characteristics-display[@ng-reflect-application='[object Object]']/div/div/div[2]/div[1]/div[1]
 
 #check_gratuité_sommaire
 ${titre_gratuité_animal_sommaire}=      //app-animal-situation-display[@ng-reflect-application='[object Object]']//h5[contains(text(),'Conditions de gratuité')]
 ${gratuité_animal_non_sommaire}=        //app-animal-situation-display[@ng-reflect-application='[object Object]']//div//div//div//span
-${gratuité_animal_oui_sommaire}=        //app-label-value[@ng-reflect-label="Animal provenant d'un refuge"]//div//div
+${gratuité_animal_oui_sommaire}=        //app-label-value[@ng-reflect-label="Chien guide et d'assistance"]//div//div
 ${gratuité_animal_oui_preuve_sommaire}=        //app-animal-situation-display[@ng-reflect-application='[object Object]']//div//button
+
+#soumettre
+${declaration_coche}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[3]/app-declarations[1]/div[1]/div[1]
+${condition_coche}=   //input[@id='chkConditionGeneric']
+${btn_soumettre}=     //button[contains(text(),'Suivant')]
+
+#vérifier soumission
+${btn_toutes_mes_demandes}=    //a[contains(text(),'Toutes mes demandes')]

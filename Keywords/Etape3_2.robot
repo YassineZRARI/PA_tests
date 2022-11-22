@@ -5,19 +5,50 @@ Resource    /Configuration/Config.robot
 
 *** Keywords ***
 vérifier_information_description_animal_sommaire
+    wait until element is visible   ${titre_description_animal_sommaire}        ${ATT}
+    element text should be      ${titre_description_animal_sommaire}    Description de l'animal
+    scroll element into view    ${nom_animal_sommaire}
+    wait until element is visible   ${nom_animal_sommaire}      ${ATT}
+    element text should be      ${nom_animal_sommaire}    testautoYZ
+    wait until element is visible    ${sexe_animal_sommaire}    ${ATT}
+    element text should be    ${sexe_animal_sommaire}       Mâle
+    wait until element is visible    ${race_animal_sommaire}        ${ATT}
+    element text should be    ${race_animal_sommaire}       Autre: other
+    wait until element is visible    ${couleur_animal_sommaire}        ${ATT}
+    element text should be    ${couleur_animal_sommaire}       beige - gris
+    wait until element is visible    ${anneé_naissance_animal_sommaire}       ${ATT}
+    element text should be    ${anneé_naissance_animal_sommaire}       2021
+    wait until element is visible    ${poids_animal_naissance}       ${ATT}
+    element text should be    ${poids_animal_naissance}       12 kilogrammes
 
 vérifier_information_caracteristique_sommaire
+    scroll element into view    ${micropuce_num_sommaire}
+    wait until element is visible    ${sterilise_sommaire}      ${ATT}
+    element text should be      ${sterilise_sommaire}     Oui
+    element should be visible    ${sterilise_preuve}
 
-vérifier_information_gratuité_sommaire
-
-#Verifier que le choix est idem dans le sommaine
-    wait until element is visible    ${modifier_caracteristiques}      ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_sommaire}      ${ATT}
-    element text should be    ${micropuce_sommaire}       Oui
+    element text should be      ${micropuce_sommaire}     Oui
     element should be visible    ${micropuce_preuve_sommaire}
     element should be visible    ${micropuce_num_sommaire_label}
-    element text should be       ${micropuce_num_sommaire}            111111
+    element text should be    ${micropuce_num_sommaire}     111111
+
+    wait until element is visible   ${distinctifs_sommaire}     ${ATT}
+    element text should be    ${distinctifs_sommaire}       Non
+
+    wait until element is visible    ${provenance_animal_sommaire}      ${ATT}
+    element text should be      ${provenance_animal_sommaire}    Inconnu
+
+    wait until element is visible   ${permis_antécédents_sommaire}      ${ATT}
+    element text should be    ${permis_antécédents_sommaire}        Inconnu
+
+vérifier_information_gratuité_sommaire
+    scroll element into view    ${gratuité_animal_oui_sommaire}
+    wait until element is visible    ${titre_gratuité_animal_sommaire}      ${ATT}
+    element text should be    ${titre_gratuité_animal_sommaire}     Conditions de gratuité
+    wait until element is visible    ${gratuité_animal_oui_sommaire}       ${ATT}
+    element text should be    ${gratuité_animal_oui_sommaire}       Oui
+    element should be visible   ${gratuité_animal_oui_preuve_sommaire}
 
 soumettre_demande
     wait until element is visible    ${btn_soumettre}   ${ATT}
