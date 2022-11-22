@@ -18,8 +18,8 @@ renseigner_etape2_3
     #dynamique xpath : //input[@id='microchippedAfter2022RulesTooYoungTemporarely_0'1/2/3]
     wait until element is visible    ${distinctifs_non}     ${ATT}
     CLICK ELEMENT    ${distinctifs_non}
-    wait until element is visible    ${vaccin_rage_non}     ${ATT}
-    click element    ${vaccin_rage_non}
+    #wait until element is visible    ${vaccin_rage_non}     ${ATT}
+    #click element    ${vaccin_rage_non}
     wait until element is visible    ${lieu_jenesaispas}    ${ATT}
     click element    ${lieu_jenesaispas}
     wait until element is visible   ${enregistre_jenesaispas}       ${ATT}
