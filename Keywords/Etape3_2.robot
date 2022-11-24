@@ -287,6 +287,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${micropuce_Non, il est âgé de moins de 6 mois}        ${ATT}
     double click element    ${micropuce_Non, il est âgé de moins de 6 mois}
     sleep    5
+    double click element    ${micropuce_Non, il est âgé de moins de 6 mois}
     element should not be visible    ${micropuce_num}
     sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
@@ -301,6 +302,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
     double click element    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
+    double click element    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should not be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
