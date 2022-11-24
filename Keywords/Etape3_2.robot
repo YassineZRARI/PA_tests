@@ -215,6 +215,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
     double click element    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
+    double click element    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should be visible    ${stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
 
@@ -232,8 +233,9 @@ modifier_vérifier_popup_caracteristiques_sommaire
     sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_oui_1}     ${ATT}
-    click element   ${popup_stérilisé_oui}
+    DOUBLE CLICK ELEMENT    ${popup_stérilisé_oui}
     sleep       5
+    DOUBLE CLICK ELEMENT    ${popup_stérilisé_oui}
     element should be visible    ${stérilisation_document_Oui}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
     choose file    ${pj_stérilisation_document_Oui}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
@@ -316,6 +318,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${micropuce_oui_1}     ${ATT}
     double click element    ${micropuce_oui_1}
     sleep       5
+    double click element    ${micropuce_oui_1}
     scroll element into view    ${micropuce_num}
     element should be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_yes}
