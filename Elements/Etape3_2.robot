@@ -70,8 +70,7 @@ ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}=   
 ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}=     //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_registered']
 ${stérilisation_Non, il est âgé de moins de 6 mois}=        //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
 ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_contraindicated_between_6_18']
-
-
+${stérilisation_document_label_popup}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_0']
 
     #micropuce
 ${micropuce?}=        //label[normalize-space()='Est-il micropucé?']

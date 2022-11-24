@@ -141,6 +141,9 @@ vérifier_popup_caracteristiques_sommaire
     element should be visible    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element text should be    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}       Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois
 
+    scroll element into view    ${stérilisation_document_label_popup}
+    element should be visible   ${stérilisation_document_label_popup}
+    element text should be      ${stérilisation_document_label_popup}       Document
 
 
 #micropuce
