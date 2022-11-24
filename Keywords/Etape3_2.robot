@@ -13,7 +13,7 @@ vérifier_information_description_animal_sommaire
     wait until element is visible    ${sexe_animal_sommaire}    ${ATT}
     element text should be    ${sexe_animal_sommaire}       Mâle
     wait until element is visible    ${race_animal_sommaire}        ${ATT}
-    element text should be    ${race_animal_sommaire}       Autre: other
+    element text should be    ${race_animal_sommaire}       Barzoï
     wait until element is visible    ${couleur_animal_sommaire}        ${ATT}
     element text should be    ${couleur_animal_sommaire}       beige - gris
     wait until element is visible    ${anneé_naissance_animal_sommaire}       ${ATT}
@@ -84,13 +84,13 @@ modifier_popup_description_animal_sommaire
     page should contain    Description de l'animal
     wait until element is visible    ${modifier_nom_animal}     ${ATT}
     clear element text    ${modifier_nom_animal}
-    sleep    3
     Input text    ${modifier_nom_animal}    Nom_modifié
     wait until element is visible    ${modifier_sex_femelle}    ${ATT}
     click element    ${modifier_sex_femelle}
     #à utiliser si on choisit "other"= index 3
     #wait until element is visible    //button[normalize-space()='Voir la liste des races']      ${ATT}
     #click element    //button[normalize-space()='Voir la liste des races']
+    scroll element into view    ${modifier_race}
     select from list by index    ${modifier_race}       4
     wait until element is visible    ${modifier_couleur}    ${ATT}
     select from list by index    ${modifier_couleur}    2
@@ -102,7 +102,7 @@ modifier_popup_description_animal_sommaire
     click element    ${sauvegarder_modification_animal}
 
 vérifier_modification_popup_description_animal_sommaire
-    wait until element is not visible    ${sauvegarder_modification_animal}
+    wait until element is not visible    ${sauvegarder_modification_animal}     ${ATT}
     wait until element is enabled       ${modifier_animal}      ${ATT}
     click element    ${modifier_animal}
     page should contain    Description de l'animal
@@ -121,9 +121,9 @@ vérifier_popup_caracteristiques_sommaire
     click element       ${modifier_caracteristiques}
 #stérilisation
     wait until element is visible    ${popup_stérilisé?}      ${ATT}
-    element text should be    ${popup_stérilisé?}         Votre animal est-il stérilisé
+    element text should be    ${popup_stérilisé?}         Votre animal est-il stérilisé?
 
-    element should be visible    ${popup_stérilisé_oui}
+    wait until element is visible    ${popup_stérilisé_oui}
     element text should be    ${popup_stérilisé_oui}      Oui
     Radio Button Should Be Set To   sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung        yes
 
@@ -174,7 +174,7 @@ vérifier_popup_caracteristiques_sommaire
     element text should be      ${micropuce_document_label_popup}       Document
 
     scroll element into view    ${distinctif_popup}
-    element should be visible       ${micropuce_document_supprimerremplacer_popup}
+    #element should be visible       ${micropuce_document_supprimerremplacer_popup} à faire
 
     click element    ${fermer_modifier_caracteristiques}
 
@@ -194,25 +194,11 @@ modifier_vérifier_popup_caracteristiques_sommaire
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
 
-    #choix "Non, mon animal est enregistré auprès d'une association de races reconnue" ==> "la preuve" n'est pas obligatoire
-    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
-    sleep       30
-    click element       ${modifier_caracteristiques}
-    wait until element is visible    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}        ${ATT}
-    click element   ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
-    sleep    5
-    element should be visible    ${stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    choose file    ${pj_stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
-    sleep    5
-    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
-    click element    ${btn_sauvegarder_popup_caracteristique}
-
     #choix "Non, il est âgé de moins de 6 mois" ==> "la preuve" n'est pas obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep       30
+    sleep       5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${stérilisation_Non, il est âgé de moins de 6 mois}        ${ATT}
     click element   ${stérilisation_Non, il est âgé de moins de 6 mois}
@@ -221,24 +207,29 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==>  "la preuve" est obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep    30
+    sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
-    click element   ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    double click element    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
-    element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    element should be visible    ${stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    choose file    ${pj_micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
+
+    scroll element into view    ${micropuce?}
+
+    choose file    ${pj_stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
     sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "oui" ==> ==> "la preuve" est obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep    30
+    sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_oui_1}     ${ATT}
     click element   ${popup_stérilisé_oui}
@@ -246,20 +237,37 @@ modifier_vérifier_popup_caracteristiques_sommaire
     element should be visible    ${stérilisation_document_Oui}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
     choose file    ${pj_stérilisation_document_Oui}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
-    sleep    5
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
     sleep       5
+    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
+    click element    ${btn_sauvegarder_popup_caracteristique}
+
+    #choix "Non, mon animal est enregistré auprès d'une association de races reconnue" ==> "la preuve" n'est pas obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    click element       ${modifier_caracteristiques}
+    wait until element is visible    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}        ${ATT}
+    double click element    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
+    sleep    5
+    double click element    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
+    element should be visible    ${stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}
+    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    choose file    ${pj_stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
+    sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
 
 #micropuce
     #choix "Non, le micropuçage est contre-indiqué pour mon animal" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}        ${ATT}
-    click element   ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
+    scroll element into view    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
+    double click element    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
     sleep    5
+    double click element    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
     element should not be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
@@ -269,12 +277,13 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, il est âgé de moins de 6 mois" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" n'est pas obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep       30
+    sleep       5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_Non, il est âgé de moins de 6 mois}        ${ATT}
-    click element   ${micropuce_Non, il est âgé de moins de 6 mois}
+    double click element    ${micropuce_Non, il est âgé de moins de 6 mois}
     sleep    5
     element should not be visible    ${micropuce_num}
     sleep    5
@@ -282,12 +291,13 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep    30
+    sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
-    click element   ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    double click element    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
     element should not be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
@@ -298,12 +308,13 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "oui" ==> ==> "Numéro de la micropuce" est visible et "la preuve" est obligatoire
+    wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
-    sleep    30
+    sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_oui_1}     ${ATT}
-    click element   ${micropuce_oui_1}
+    double click element    ${micropuce_oui_1}
     sleep       5
     scroll element into view    ${micropuce_num}
     element should be visible    ${micropuce_num}

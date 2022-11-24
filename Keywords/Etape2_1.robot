@@ -16,7 +16,7 @@ renseigner_etape2_1
     wait until element is visible    ${sex_chien}   ${ATT}
     click element    ${sex_chien}
     wait until element is visible    ${race_chien}  ${ATT}
-    select from list by index    ${race_chien}  3
+    select from list by index    ${race_chien}  5
     wait until element is visible    ${couleur_chien}   ${ATT}
     select from list by index    ${couleur_chien}   6
     wait until element is visible    ${annnee_naissance_chien}  ${ATT}
