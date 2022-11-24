@@ -23,7 +23,7 @@ Test Setup     setup    ${Navigateur}
 
 
 *** Test Cases ***
-TC1
+TC1_Régression_Global_1
     [tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
@@ -37,6 +37,9 @@ TC1
     vérifier_information_gratuité_sommaire      non
     modifier_description_animal_sommaire
     vérifier_modification_description_animal_sommaire
+
+    soumettre_demande
+    vérifier_soumission_demande
 
 
 

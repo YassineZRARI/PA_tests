@@ -77,7 +77,7 @@ vérifier_soumission_demande
     wait until element is visible       ${btn_toutes_mes_demandes}      ${ATT}
     page should contain    Numéro de la demande
 
-modifier_description_animal_sommaire
+modifier_popup_description_animal_sommaire
     scroll element into view    ${modifier_animal}
     wait until element is visible       ${modifier_animal}      ${ATT}
     click element    ${modifier_animal}
@@ -101,7 +101,7 @@ modifier_description_animal_sommaire
     wait until element is visible    ${sauvegarder_modification_animal}     ${ATT}
     click element    ${sauvegarder_modification_animal}
 
-vérifier_modification_description_animal_sommaire
+vérifier_modification_popup_description_animal_sommaire
     wait until element is not visible    ${sauvegarder_modification_animal}
     wait until element is enabled       ${modifier_animal}      ${ATT}
     click element    ${modifier_animal}
@@ -115,3 +115,66 @@ vérifier_modification_description_animal_sommaire
     element attribute value should be    ${modifier_poids}     value       10
     click element    ${fermer_modifier_animal}
 
+
+vérifier_popup_caracteristiques_sommaire
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    click element       ${modifier_caracteristiques}
+
+#stérilisation
+    wait until element is visible    ${popup_stérilisé?}      ${ATT}
+    element text should be    ${popup_stérilisé?}         Votre animal est-il stérilisé
+
+    element should be visible    ${popup_stérilisé_oui}
+    element text should be    ${popup_stérilisé_oui}      Oui
+    Radio Button Should Be Set To   sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung        yes
+
+    element should be visible    ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}
+    element text should be    ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}       Non, la stérilisation est contre-indiqué pour mon animal
+
+    element should be visible    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
+    element text should be    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}       Non, mon animal est enregistré auprès d'une association de races reconnue
+
+    element should be visible    ${stérilisation_Non, il est âgé de moins de 6 mois}
+    element text should be    ${stérilisation_Non, il est âgé de moins de 6 mois}       Non, il est âgé de moins de 6 mois
+
+    element should be visible    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    element text should be    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}       Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois
+
+
+
+#micropuce
+    wait until element is visible    ${micropuce?}      ${ATT}
+    element text should be    ${micropuce?}         Est-il micropucé?
+
+    element should be visible    ${micropuce_oui_1}
+    element text should be    ${micropuce_oui_1}        Oui
+    Radio Button Should Be Set To   microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung        yes
+
+    element should be visible    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
+    element text should be    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}       Non, le micropuçage est contre-indiqué pour mon animal
+
+    element should be visible    ${micropuce_Non, il est âgé de moins de 6 mois}
+    element text should be    ${micropuce_Non, il est âgé de moins de 6 mois}       Non, il est âgé de moins de 6 mois
+
+    element should be visible    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    element text should be    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}       Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois
+
+    scroll element into view    ${micropuce_oui_popup}
+    wait until element is visible        ${micropuce_oui_popup}       ${ATT}
+    scroll element into view        ${micropuce_num_popup}
+    radio button should be set to        microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung       yes
+
+    scroll element into view    ${micropuce_num_popup}
+    wait until element is visible       ${micropuce_num_popup}        ${ATT}
+    element attribute value should be      ${micropuce_num_popup}       value       111111
+
+    scroll element into view    ${distinctif_popup}
+    scroll element into view    ${micropuce_document_label_popup}
+    element should be visible   ${micropuce_document_label_popup}
+    element text should be      ${micropuce_document_label_popup}       Document
+
+    scroll element into view    ${distinctif_popup}
+    element should be visible       ${micropuce_document_supprimerremplacer_popup}
+
+    click element    ${fermer_modifier_caracteristiques}

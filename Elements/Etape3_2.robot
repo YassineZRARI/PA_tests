@@ -49,7 +49,7 @@ ${btn_soumettre}=     //button[contains(text(),'Suivant')]
 #vérifier soumission
 ${btn_toutes_mes_demandes}=    //a[contains(text(),'Toutes mes demandes')]
 
-#modifier_description_animal_sommaire
+#modifier_popup_description_animal_sommaire
 ${modifier_animal}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[1]/div[1]/div[2]/button[1]
 ${modifier_nom_animal}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-description-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-animal-form[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/vdm-input[1]/div[1]/input[1]
 ${modifier_sex_femelle}=    //label[contains(text(),'Femelle')]
@@ -60,4 +60,39 @@ ${modifier_poids}=      //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-
 ${sauvegarder_modification_animal}=     //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-description-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[3]/div[1]/button[2]
 ${fermer_modifier_animal}=         //div[@class='modal fade show']//span[@aria-hidden='true'][normalize-space()='×']
 
-#
+#vérifier_popup_caracteristiques_sommaire
+${btn_sauvegarder_popup_caracteristique}=     //div[@class='modal fade show']//button[@type='button'][normalize-space()='Sauvegarder']
+
+    #stérilisation
+${popup_stérilisé?}=       //label[normalize-space()='Votre animal est-il stérilisé?']
+${popup_stérilisé_oui}=     //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungyes']
+${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_medical']
+${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}=     //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_registered']
+${stérilisation_Non, il est âgé de moins de 6 mois}=        //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
+${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_contraindicated_between_6_18']
+
+
+
+    #micropuce
+${micropuce?}=        //label[normalize-space()='Est-il micropucé?']
+${micropuce_oui_1}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungyes']
+${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}=        //label[contains(text(),'Non, le micropuçage est contre-indiqué pour mon an')]
+${micropuce_Non, il est âgé de moins de 6 mois}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
+${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=        //label[contains(text(),'Non, le micropuçage est temporairement contre-indi')]
+${micropuce_num}=       //input[@placeholder='Entrez le numéro de la micropuce']
+${micropuce_document_yes}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_0'][normalize-space()='Document']
+${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}=  //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_1'][normalize-space()='Document']
+${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=       //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_2'][normalize-space()='Document']
+${micropuce_preuve}=        //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/vdm-file-preview[1]/div[1]/img[1]
+${pj_micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}=        //div[3]//div[1]//vdm-file-selector[1]//div[1]//div[1]//div[1]//input[1]
+${pj_micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=    //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/div[1]/div[4]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+${pj_micropuce_document_oui_1}=    //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+
+${micropuce_oui_popup}=         //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/vdm-radio[1]/div[1]/div[1]/label[1]
+${micropuce_num_popup}=         //input[@placeholder='Entrez le numéro de la micropuce']
+${micropuce_document_label_popup}=     //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_0'][text()='Document']
+${micropuce_document_supprimerremplacer_popup}=   //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/div[1]/button[1]
+
+${distinctif_popup}=        //label[contains(text(),'A-t-il des signes distinctifs?')]
+
+
