@@ -40,7 +40,8 @@ TC1_Régression_Global_1
     vérifier_popup_caracteristiques_sommaire
     modifier_vérifier_popup_caracteristiques_sommaire
     soumettre_demande
-    vérifier_soumission_demande
+    payer_en_ligne
+    vérifier_le_paiement
 
 
 
