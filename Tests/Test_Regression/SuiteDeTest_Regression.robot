@@ -21,7 +21,22 @@ Resource    C:/Users/yassine.zrari/PycharmProjects/PA_tests/Configuration/Config
 
 Test Setup     setup    ${Navigateur}
 
+
 *** Test Cases ***
+TC1
+    [tags]    test
+    se_connecter    ${email_citoyen}    ${mdp}
+    initier_création_demande
+    renseigner_etape2_1
+    renseigner_etape2_2
+    renseigner_etape2_3
+    renseigner_etape3_1     non
+    #etape3_2
+    vérifier_information_description_animal_sommaire
+    vérifier_information_caracteristique_sommaire
+    vérifier_information_gratuité_sommaire      non
+    modifier_description_animal_sommaire
+    vérifier_modification_description_animal_sommaire
 
 
 

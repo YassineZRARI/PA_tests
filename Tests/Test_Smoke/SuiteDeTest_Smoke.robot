@@ -51,7 +51,6 @@ TC4_Smoke_création_demande_gratuite
     vérifier_soumission_demande
 
 TC5_Smoke_création_demande_avec_paiement
-    [tags]    test
     se_connecter    ${email_citoyen}    ${mdp}
     initier_création_demande
     renseigner_etape2_1
