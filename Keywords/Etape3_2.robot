@@ -178,72 +178,7 @@ vérifier_popup_caracteristiques_sommaire
 
     click element    ${fermer_modifier_caracteristiques}
 
-modifier_popup_caracteristiques_sommaire
-#micropuce
-    #choix "Non, le micropuçage est contre-indiqué pour mon animal" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
-    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
-    click element       ${modifier_caracteristiques}
-    wait until element is visible    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}        ${ATT}
-    click element   ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
-    sleep    5
-    element should not be visible    ${micropuce_num}
-    element should be visible    ${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    choose file    ${pj_micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
-    sleep    5
-    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
-    click element    ${btn_sauvegarder_popup_caracteristique}
-
-    #choix "Non, il est âgé de moins de 6 mois" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" n'est pas obligatoire
-    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
-    sleep       30
-    click element       ${modifier_caracteristiques}
-    wait until element is visible    ${micropuce_Non, il est âgé de moins de 6 mois}        ${ATT}
-    click element   ${micropuce_Non, il est âgé de moins de 6 mois}
-    sleep    5
-    element should not be visible    ${micropuce_num}
-    sleep    5
-    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
-    click element    ${btn_sauvegarder_popup_caracteristique}
-
-    #choix "Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
-    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
-    sleep    30
-    click element       ${modifier_caracteristiques}
-    wait until element is visible    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
-    click element   ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
-    sleep    5
-    element should not be visible    ${micropuce_num}
-    element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    choose file    ${pj_micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
-    sleep    5
-    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
-    click element    ${btn_sauvegarder_popup_caracteristique}
-
-    #choix "oui" ==> ==> "Numéro de la micropuce" est visible et "la preuve" est obligatoire
-    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
-    scroll element into view    ${modifier_caracteristiques}
-    sleep    30
-    click element       ${modifier_caracteristiques}
-    wait until element is visible    ${micropuce_oui_1}     ${ATT}
-    click element   ${micropuce_oui_1}
-    sleep       5
-    scroll element into view    ${micropuce_num}
-    element should be visible    ${micropuce_num}
-    element should be visible    ${micropuce_document_yes}
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    choose file    ${pj_micropuce_document_oui_1}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
-    sleep    5
-    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
-    input text    ${micropuce_num}      11111111
-    sleep       5
-    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
-    click element    ${btn_sauvegarder_popup_caracteristique}
-
+modifier_vérifier_popup_caracteristiques_sommaire
 #stérilisation
     #choix "Non, la stérilisation est contre-indiqué pour mon animal" ==>  "la preuve" est obligatoire
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
@@ -316,3 +251,70 @@ modifier_popup_caracteristiques_sommaire
     sleep       5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
+
+#micropuce
+    #choix "Non, le micropuçage est contre-indiqué pour mon animal" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    click element       ${modifier_caracteristiques}
+    wait until element is visible    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}        ${ATT}
+    click element   ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
+    sleep    5
+    element should not be visible    ${micropuce_num}
+    element should be visible    ${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}
+    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    choose file    ${pj_micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
+    sleep    5
+    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
+    click element    ${btn_sauvegarder_popup_caracteristique}
+
+    #choix "Non, il est âgé de moins de 6 mois" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" n'est pas obligatoire
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    sleep       30
+    click element       ${modifier_caracteristiques}
+    wait until element is visible    ${micropuce_Non, il est âgé de moins de 6 mois}        ${ATT}
+    click element   ${micropuce_Non, il est âgé de moins de 6 mois}
+    sleep    5
+    element should not be visible    ${micropuce_num}
+    sleep    5
+    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
+    click element    ${btn_sauvegarder_popup_caracteristique}
+
+    #choix "Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    sleep    30
+    click element       ${modifier_caracteristiques}
+    wait until element is visible    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
+    click element   ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    sleep    5
+    element should not be visible    ${micropuce_num}
+    element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    choose file    ${pj_micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
+    sleep    5
+    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
+    click element    ${btn_sauvegarder_popup_caracteristique}
+
+    #choix "oui" ==> ==> "Numéro de la micropuce" est visible et "la preuve" est obligatoire
+    wait until element is visible    ${modifier_caracteristiques}       ${ATT}
+    scroll element into view    ${modifier_caracteristiques}
+    sleep    30
+    click element       ${modifier_caracteristiques}
+    wait until element is visible    ${micropuce_oui_1}     ${ATT}
+    click element   ${micropuce_oui_1}
+    sleep       5
+    scroll element into view    ${micropuce_num}
+    element should be visible    ${micropuce_num}
+    element should be visible    ${micropuce_document_yes}
+    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    choose file    ${pj_micropuce_document_oui_1}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
+    sleep    5
+    element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    input text    ${micropuce_num}      11111111
+    sleep       5
+    element should be enabled    ${btn_sauvegarder_popup_caracteristique}
+    click element    ${btn_sauvegarder_popup_caracteristique}
+
+
