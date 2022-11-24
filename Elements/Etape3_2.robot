@@ -71,6 +71,18 @@ ${stérilisation_Non, mon animal est enregistré auprès d'une association de ra
 ${stérilisation_Non, il est âgé de moins de 6 mois}=        //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
 ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoungno_contraindicated_between_6_18']
 ${stérilisation_document_label_popup}=      //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_0']
+${stérilisation_document_Non, le micropuçage est contre-indiqué pour mon animal}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_1'][normalize-space()='Document']
+${pj_stérilisation_document_Non, le micropuçage est contre-indiqué pour mon animal}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[3]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+${stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_3'][normalize-space()='Document']
+${pj_stérilisation_document_Non, mon animal est enregistré auprès d'une association de races reconnue}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[5]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+${stérilisation_document_Non, il est âgé de moins de 6 mois}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_3'][normalize-space()='Document']
+${stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_2'][normalize-space()='Document']
+${pj_stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[4]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+
+${stérilisation_document_Oui}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_0'][normalize-space()='Document']
+${pj_stérilisation_document_Oui}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+
+
 
     #micropuce
 ${micropuce?}=        //label[normalize-space()='Est-il micropucé?']
