@@ -78,11 +78,8 @@ ${pj_stérilisation_document_Non, mon animal est enregistré auprès d'une assoc
 ${stérilisation_document_Non, il est âgé de moins de 6 mois}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_3'][normalize-space()='Document']
 ${stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_2'][normalize-space()='Document']
 ${pj_stérilisation_document_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[4]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
-
 ${stérilisation_document_Oui}=       //label[@for='sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung_0'][normalize-space()='Document']
 ${pj_stérilisation_document_Oui}=       //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
-
-
 
     #micropuce
 ${micropuce?}=        //label[normalize-space()='Est-il micropucé?']
@@ -105,5 +102,12 @@ ${micropuce_document_label_popup}=     //label[@for='microchippedAfter2022RulesT
 ${micropuce_document_supprimerremplacer_popup}=   //body[1]/div[1]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/app-animal-characteristics-modal[1]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[2]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/div[1]/button[1]
 
 ${distinctif_popup}=        //label[contains(text(),'A-t-il des signes distinctifs?')]
+
+#modifier popup gratuité
+    #chien
+${modifier_gratuite}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-animal-situation-wizard[1]/vdm-wizard[1]/main[1]/div[1]/div[1]/app-summary-wizard-step[1]/div[1]/app-summary[1]/div[1]/div[1]/div[1]/div[4]/button[1]
+${modifier_chien_assistance_oui}=     //label[@for='refugeAdoptiontrue']
+${modifier_pj_chien_assistance_oui}=     //body[1]/div[2]/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[2]/vdm-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/app-animal-characteristics-form[1]/div[1]/form[1]/div[1]/app-animal-characteristic[1]/div[1]/form[1]/div[1]/div[2]/div[1]/vdm-file-selector[1]/div[1]/div[1]/div[1]/input[1]
+${sauvegarder_modification_gratuite}=   //body/div[@id='main-content']/div[1]/div[2]/div[1]/app-root[1]/div[1]/app-dashboard-page[1]/app-modify-application[1]/div[1]/div[2]/app-summary[1]/app-animal-characteristics-modal[2]/vdm-modal[1]/div[1]/div[1]/div[1]/div[3]/div[1]/button[2]
 
 

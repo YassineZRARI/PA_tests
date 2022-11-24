@@ -38,7 +38,7 @@ TC1_Régression_Global_1
     modifier_description_animal_sommaire
     vérifier_modification_description_animal_sommaire
     vérifier_popup_caracteristiques_sommaire
-
+    modifier_vérifier_popup_caracteristiques_sommaire
     soumettre_demande
     vérifier_soumission_demande
 
