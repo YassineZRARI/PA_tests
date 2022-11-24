@@ -332,5 +332,5 @@ modifier_vérifier_popup_caracteristiques_sommaire
     sleep       5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
-
+#
 
