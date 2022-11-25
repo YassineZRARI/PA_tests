@@ -23,7 +23,7 @@ ${modifier_caracteristiques}=       //body/div[@id='main-content']/div[1]/div[2]
 ${fermer_modifier_caracteristiques}=        //div[@class='modal fade show']//span[@aria-hidden='true'][normalize-space()='×']
 ${titre_caracteristique_animal_sommaire}=       //app-animal-characteristics-display[@ng-reflect-application='[object Object]']//h5
 
-${micropuce_sommaire}=      //app-label-value[@ng-reflect-label='Micropucé']//div//div[contains(text(),'Oui')]
+${micropuce_sommaire}=      //app-label-value[@ng-reflect-label='Micropucé']//div//div
 ${micropuce_preuve_sommaire}=    //*[@id="main-content"]/div/div/app-summary-wizard-step/div/app-summary/div/div[1]/div/div[3]/app-animal-characteristics-display/div/div[1]/div[2]/div[2]/app-document-display/div/button
 ${micropuce_num_sommaire_label}=        //app-label-value[@class='ng-star-inserted']//div//div
 ${micropuce_num_sommaire}=  //app-label-value[@ng-reflect-label='Numéro de la micropuce']//div//div
@@ -88,7 +88,7 @@ ${pj_stérilisation_document_Oui}=       //div[@role='dialog']//div[@role='docum
     #micropuce
 ${micropuce?}=        //label[normalize-space()='Est-il micropucé?']
 ${micropuce_oui_1}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungyes']
-#${textinfo_popup_micropuce_oui_1}=      //div[contains(text(),'Veuillez nous fournir une preuve de micropuçage qu')]
+${textinfo_popup_micropuce_oui_1}=      //div[contains(text(),'Veuillez nous fournir une preuve de micropuçage qu')]
 ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}=        //label[contains(text(),'Non, le micropuçage est contre-indiqué pour mon an')]
 ${textinfo_popup_Non, le micropuçage est contre-indiqué pour mon animal}=      //div[contains(text(),'Veuillez nous fournir une preuve de contre-indicat')]
 ${micropuce_Non, il est âgé de moins de 6 mois}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
