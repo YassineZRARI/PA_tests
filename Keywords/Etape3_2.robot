@@ -279,9 +279,12 @@ modifier_vérifier_popup_caracteristiques_sommaire
     double click element    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
     sleep    5
     double click element    ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}
+    wait until element is visible    ${textinfo_popup_Non, le micropuçage est contre-indiqué pour mon animal}       ${ATT}
+    element text should be    ${textinfo_popup_Non, le micropuçage est contre-indiqué pour mon animal}      Veuillez nous fournir une preuve de contre-indication pour le micropuçage qui indique votre nom et celui de votre animal.
     element should not be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    scroll element into view    ${distinctif_popup}
     choose file    ${pj_micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
     sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
@@ -298,6 +301,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     sleep    5
     double click element    ${micropuce_Non, il est âgé de moins de 6 mois}
     element should not be visible    ${micropuce_num}
+    scroll element into view        ${distinctif_popup}
     sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
     click element    ${btn_sauvegarder_popup_caracteristique}
@@ -312,9 +316,12 @@ modifier_vérifier_popup_caracteristiques_sommaire
     double click element    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
     double click element    ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
+    wait until element is visible    ${textinfo_popup_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}       ${ATT}
+    element text should be    ${textinfo_popup_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}          Veuillez nous fournir une preuve de contre-indication pour le micropuçage qui indique votre nom et celui de votre animal.
     element should not be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    scroll element into view    ${distinctif_popup}
     choose file    ${pj_micropuce_document_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
     sleep    5
     element should be enabled    ${btn_sauvegarder_popup_caracteristique}
@@ -330,10 +337,13 @@ modifier_vérifier_popup_caracteristiques_sommaire
     double click element    ${micropuce_oui_1}
     sleep       5
     double click element    ${micropuce_oui_1}
+    wait until element is visible    ${textinfo_popup_micropuce_oui_1}      ${ATT}
+    element text should be      ${textinfo_popup_micropuce_oui_1}       Veuillez nous fournir une preuve de micropuçage qui indique votre nom et celui de votre animal.
     scroll element into view    ${micropuce_num}
     element should be visible    ${micropuce_num}
     element should be visible    ${micropuce_document_yes}
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}
+    scroll element into view    ${distinctif_popup}
     choose file    ${pj_micropuce_document_oui_1}  C://Users/yassine.zrari/Desktop/SDSR/BO30.pdf
     sleep    5
     element should be disabled    ${btn_sauvegarder_popup_caracteristique}

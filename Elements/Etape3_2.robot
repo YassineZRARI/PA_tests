@@ -88,9 +88,12 @@ ${pj_stérilisation_document_Oui}=       //div[@role='dialog']//div[@role='docum
     #micropuce
 ${micropuce?}=        //label[normalize-space()='Est-il micropucé?']
 ${micropuce_oui_1}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungyes']
+#${textinfo_popup_micropuce_oui_1}=      //div[contains(text(),'Veuillez nous fournir une preuve de micropuçage qu')]
 ${micropuce_Non, le micropuçage est contre-indiqué pour mon animal}=        //label[contains(text(),'Non, le micropuçage est contre-indiqué pour mon an')]
+${textinfo_popup_Non, le micropuçage est contre-indiqué pour mon animal}=      //div[contains(text(),'Veuillez nous fournir une preuve de contre-indicat')]
 ${micropuce_Non, il est âgé de moins de 6 mois}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoungno_too_young']
 ${micropuce_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=        //label[contains(text(),'Non, le micropuçage est temporairement contre-indi')]
+${textinfo_popup_Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}=      //div[contains(text(),'Veuillez nous fournir une preuve de contre-indicat')]
 ${micropuce_num}=       //input[@placeholder='Entrez le numéro de la micropuce']
 ${micropuce_document_yes}=      //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_0'][normalize-space()='Document']
 ${micropuce_document_Non, le micropuçage est contre-indiqué pour mon animal}=  //label[@for='microchippedAfter2022RulesTooYoungAndTemporarelyTooYoung_1'][normalize-space()='Document']
