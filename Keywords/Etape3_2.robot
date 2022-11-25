@@ -184,8 +184,8 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
     click element       ${modifier_caracteristiques}
-    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung      yes
     wait until element is visible    ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}        ${ATT}
+    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung      yes
     double click element       ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}
     sleep    5
     double click element       ${stérilisation_Non, la stérilisation est contre-indiqué pour mon animal}
@@ -204,8 +204,8 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
     click element       ${modifier_caracteristiques}
-    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung         no_medical
     wait until element is visible    ${stérilisation_Non, il est âgé de moins de 6 mois}        ${ATT}
+    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung         no_medical
     double click element    ${stérilisation_Non, il est âgé de moins de 6 mois}
     sleep    5
     double click element    ${stérilisation_Non, il est âgé de moins de 6 mois}
@@ -218,8 +218,8 @@ modifier_vérifier_popup_caracteristiques_sommaire
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
     click element       ${modifier_caracteristiques}
-    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung     no_too_young
     wait until element is visible    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}        ${ATT}
+    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung      no_too_young
     double click element    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
     sleep    5
     double click element    ${stérilisation_Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois}
@@ -240,6 +240,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     sleep    5
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${micropuce_oui_1}     ${ATT}
+    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung         no_contraindicated_between_6_18
     DOUBLE CLICK ELEMENT    ${popup_stérilisé_oui}
     sleep       5
     DOUBLE CLICK ELEMENT    ${popup_stérilisé_oui}
@@ -258,6 +259,7 @@ modifier_vérifier_popup_caracteristiques_sommaire
     scroll element into view    ${modifier_caracteristiques}
     click element       ${modifier_caracteristiques}
     wait until element is visible    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}        ${ATT}
+    radio button should be set to    sterilizedAfter2022RulesTooYoungAndTemporarelyTooYoung         yes
     double click element    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
     sleep    5
     double click element    ${stérilisation_Non, mon animal est enregistré auprès d'une association de races reconnue}
