@@ -200,6 +200,11 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, il est âgé de moins de 6 mois" ==> "la preuve" n'est pas obligatoire
+        #check_sommaire
+    wait until element is visible    ${sterilise_sommaire}      ${ATT}
+    element text should be      ${sterilise_sommaire}     Non, la stérilisation est contre-indiqué pour mon animal
+    wait until element is visible    ${sterilise_preuve}        ${ATT}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -214,6 +219,11 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==>  "la preuve" est obligatoire
+     #check_sommaire
+    wait until element is visible    ${sterilise_sommaire}      ${ATT}
+    element text should be      ${sterilise_sommaire}     Non, il est âgé de moins de 6 mois
+    ELEMENT SHOULD NOT BE VISIBLE    ${sterilise_preuve}        ${ATT}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -234,6 +244,11 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "oui" ==> ==> "la preuve" est obligatoire
+        #check_sommaire
+    wait until element is visible    ${sterilise_sommaire}      ${ATT}
+    element text should be      ${sterilise_sommaire}     Non, la stérilisation est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois
+    wait until element is visible    ${sterilise_preuve}        ${ATT}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -254,6 +269,11 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, mon animal est enregistré auprès d'une association de races reconnue" ==> "la preuve" n'est pas obligatoire
+        #check_sommaire
+    wait until element is visible    ${sterilise_sommaire}      ${ATT}
+    element text should be      ${sterilise_sommaire}     Oui
+    wait until element is visible    ${sterilise_preuve}        ${ATT}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
