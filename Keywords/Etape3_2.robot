@@ -292,6 +292,12 @@ modifier_vérifier_popup_caracteristiques_sommaire
 
 #micropuce
     #choix "Non, le micropuçage est contre-indiqué pour mon animal" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+        #check_sommaire
+    wait until element is visible    ${micropuce_sommaire}      ${ATT}
+    element text should be      ${micropuce_sommaire}     Oui
+    element should be visible    ${micropuce_preuve_sommaire}
+    element should be visible    ${micropuce_num_sommaire_label}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -313,6 +319,12 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, il est âgé de moins de 6 mois" ==> "Numéro de la micropuce" n'est plus visible et "la preuve" n'est pas obligatoire
+        #check_sommaire
+    wait until element is visible    ${micropuce_sommaire}      ${ATT}
+    element text should be      ${micropuce_sommaire}     Non, le micropuçage est contre-indiqué pour mon animal
+    element should be visible    ${micropuce_preuve_sommaire}
+    element should not be visible      ${micropuce_num_sommaire_label}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -329,6 +341,13 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois" ==> ==> "Numéro de la micropuce" n'est plus visible et "la preuve" est obligatoire
+        #check_sommaire
+    wait until element is visible    ${micropuce_sommaire}      ${ATT}
+    element text should be      ${micropuce_sommaire}     Non, il est âgé de moins de 6 mois
+    element should not be visible    ${micropuce_preuve_sommaire}
+    element should not be visible        ${micropuce_num_sommaire_label}
+
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
@@ -350,6 +369,12 @@ modifier_vérifier_popup_caracteristiques_sommaire
     click element    ${btn_sauvegarder_popup_caracteristique}
 
     #choix "oui" ==> ==> "Numéro de la micropuce" est visible et "la preuve" est obligatoire
+            #check_sommaire
+    wait until element is visible    ${micropuce_sommaire}      ${ATT}
+    element text should be      ${micropuce_sommaire}     Non, le micropuçage est temporairement contre-indiqué pour mon animal, jusqu’à ses 18 mois
+    element should not be visible    ${micropuce_preuve_sommaire}
+    element should not be visible        ${micropuce_num_sommaire_label}
+
     wait until element is not visible    ${btn_sauvegarder_popup_caracteristique}     ${ATT}
     wait until element is visible    ${modifier_caracteristiques}       ${ATT}
     scroll element into view    ${modifier_caracteristiques}
