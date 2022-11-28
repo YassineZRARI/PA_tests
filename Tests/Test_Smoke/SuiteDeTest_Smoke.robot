@@ -46,7 +46,7 @@ TC4_Smoke_création_demande_gratuite
     #etape3_2
     vérifier_information_description_animal_sommaire
     vérifier_information_caracteristique_sommaire
-    vérifier_information_gratuité_sommaire
+    vérifier_information_gratuité_sommaire      oui
     soumettre_demande
     vérifier_soumission_demande
 
